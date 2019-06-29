@@ -12,11 +12,12 @@ const PhotoSection = () => {
       })
 
     return(
-        <section className="main__page-5">
+        <div className="main__page-5">
+          
            {images.map(img => (
              <img key={img.id} ref={ref} src={inView?img.src:""}></img>
            ))}
-      </section>
+      </div>
     )
 }
 

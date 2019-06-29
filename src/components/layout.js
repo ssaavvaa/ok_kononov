@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css";
-import '../Styles/media_rules-font-size.scss';
+
 
 import "../Styles/main-page-head-section.scss";
 import "../Styles/main-page-second-section.scss";
@@ -14,6 +14,7 @@ import '../Styles/main-page-courses-section.scss';
 import '../Styles/main-page-photo-section.scss';
 import '../Styles/main-page-calendar-section.scss';
 import '../Styles/lesson-card.scss';
+import '../Styles/media_rules-font-size.scss';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

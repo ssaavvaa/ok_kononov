@@ -12,7 +12,6 @@ $phone:768px;
 
 @mixin button-primary {
     color:white;
-    font-size: 1.1rem;
     border-radius: 30px;
     outline:none;
     transition:all .3s ease-in-out;
@@ -28,7 +27,6 @@ $phone:768px;
   @mixin button-secondary {
     color:white;
     padding:.5rem 1rem;
-    font-size: 1.1rem;
     border-radius: 15px;
     outline:none;
     transition:all .3s ease-in-out;

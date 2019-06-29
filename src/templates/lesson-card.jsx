@@ -15,14 +15,14 @@ const Lesson_card = props => {
          <img ref={ref} src={inView?props.src:""}/>
            <h3>{props.heading}</h3>
            <p>{props.description}</p>
-           <p><strong><u>Цель</u>:</strong> {props.target}</p>
-           <p><strong><u>Уровень</u>: </strong>{props.level}</p>
+           <p><strong>Цель:</strong> {props.target}</p>
+           <p><strong>Уровень: </strong>{props.level}</p>
            {props.free === false
            ?<div>
-             <span>${props.price} </span>
-             <span style={{textDecoration:'line-through', color:'grey'}}>${props.old_price}</span>
+             <span style={{fontSize:'1.3rem'}}>${props.price} </span>
+             <span style={{textDecoration:'line-through', fontSize:'1.2em', color:'grey'}}>${props.old_price}</span>
            </div>
-           :<p>Бесплатно</p>}
+           :<span style={{fontSize:'1.2rem'}}>Бесплатно</span>}
            <button>Подробнее</button>
       </article>
     )

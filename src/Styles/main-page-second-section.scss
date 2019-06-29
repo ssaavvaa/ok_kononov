@@ -1,25 +1,32 @@
 @import './variables.scss';
 
 .main__page-2{
-    letter-spacing: 1px;
-    background:#ffffff;
     display: flex;
     justify-content: center;
-    align-items: center;
     color:rgb(0, 0, 0);
     text-align: center;
-    padding:2rem 0px;
+    padding:30px 1rem;
+    max-width: 1000px;
+    margin:0 auto;
     h2 {
        font-weight: 400;
-        max-width: 1000px;
-        margin:3rem auto;
+       line-height: 1.7;
+       font-size: 2rem;
+       @include tablet{
+        font-size: 1.7rem;
+      }
+        @include phone{
+        line-height: 1.4;
+        font-size: 1.5rem;
+    }
+    
     }
 }
 
 .line{
     width:10vw;
     height:1px;
-    margin:0 auto;
+    margin:1.5rem auto;
     background: black;
 }
 

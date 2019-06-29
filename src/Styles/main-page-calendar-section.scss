@@ -5,10 +5,79 @@
  
     h2{
         text-align: center;
+        font-size: 2.3rem;
+        @include tablet{
+            font-size: 1.8rem;
+        }
+        @include phone{
+            font-size: 1.5rem;
+        }
+    }
+    h3{
+        text-align: center;
+        max-width: 600px;
+        line-height: 1.5;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-bottom: 6rem;
+        @include tablet{
+            font-size: 1.3rem;
+        }
+        @include phone{
+            font-size: 1.2rem;
+        }
     }
 
     @include phone{
-        padding:2rem 1rem;
+        padding:3rem 1rem;
     }
-   
+}
+
+.calendarItem__wrapper{
+    display: flex;
+    max-width:1000px;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: row;
+    margin-bottom: 4rem;
+    @include phone{
+        flex-direction: column;
+        box-shadow: 0 -5px 5px -5px rgba(128, 128, 128, 0.466);
+        align-items: center;
+    }
+}
+
+.eventDate{
+    position:relative;
+    right:10vw;
+    box-shadow: 0 -5px 5px -5px rgba(128, 128, 128, 0.466);
+    display: flex;
+    flex-direction: column;
+    padding-top:1.7rem;
+    @include phone{
+        right:0;
+        box-shadow: none;
+    }
+}
+
+.eventCity{
+    box-shadow: 0 -5px 5px -5px rgba(128, 128, 128, 0.466);
+    padding-top:1.7rem;
+    display: flex;
+    justify-content: flex-start;
+    @include phone{
+        box-shadow: none;
+        flex-direction: column;
+        max-width: 300px;
+        align-items: center;
+    }
+
+    span{
+        position:relative;
+        left:5vw;
+        @include phone{
+            left:0;
+        }
+    }
 }
