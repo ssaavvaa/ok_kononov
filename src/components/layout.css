@@ -1,7 +1,8 @@
 html {
-  font-family: sans-serif;
+  
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  letter-spacing: .4px;
 }
 body {
   margin: 0;
@@ -615,8 +616,15 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
+
+body{
+  min-width: 400px;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:20px;
+}
+
+

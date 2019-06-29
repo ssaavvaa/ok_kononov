@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+.main__paige-6{
+    padding:4rem 1rem;
+ 
+    h2{
+        text-align: center;
+    }
+
+    @include phone{
+        padding:2rem 1rem;
+    }
+   
+}

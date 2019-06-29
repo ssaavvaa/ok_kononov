@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.main__page-2{
+    letter-spacing: 1px;
+    background:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    padding:2rem 0px;
+    h2 {
+       font-weight: 400;
+        max-width: 1000px;
+        margin:3rem auto;
+    }
+}
+
+.line{
+    width:10vw;
+    height:1px;
+    margin:0 auto;
+    background: black;
+}
+
+
+
+
+

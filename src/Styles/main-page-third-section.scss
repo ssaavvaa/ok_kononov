@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+
+.main__page-3{
+    letter-spacing: 1px;
+    background:linear-gradient(rgba(0, 0, 0, 0.568), black),url('../images/third-section-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 2px black;
+    color:white;
+    &_container{
+        padding:5rem 1rem;
+    }
+    h1 {
+        font-weight: 500;
+        max-width: 900px;
+        margin-bottom:3rem;
+    }
+    h3{
+        max-width: 600px;
+        margin:0 auto;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    button{
+        @include button-primary;
+        padding:1rem 2rem;
+        margin-bottom: 3rem;
+    }
+
+}
+

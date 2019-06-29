@@ -1,0 +1,55 @@
+$h1-font-size:2.75rem;
+$h3-font-size:1.2rem;
+$h2-font-size:2rem;
+$p-font-size:1.1rem;
+$secondary-paragraph:.8rem;
+$roboto: 'Roboto', sans-serif;
+$button-primary-background:#fc8a45;
+$button-primary-hover-background:#dd681f;
+
+$tablet: 1024px;
+$phone:768px;
+
+@mixin button-primary {
+    color:white;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    outline:none;
+    transition:all .3s ease-in-out;
+    border:0px;
+    cursor:pointer;
+    background: $button-primary-background;
+    &:hover{
+      transform: scale(1.05);
+      background: $button-primary-hover-background;
+    }
+  }
+
+  @mixin button-secondary {
+    color:white;
+    padding:.5rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    outline:none;
+    transition:all .3s ease-in-out;
+    border:0px;
+    cursor:pointer;
+    background: $button-primary-background;
+    &:hover{
+      transform: scale(1.05);
+      background: $button-primary-hover-background;
+    }
+  }
+
+
+
+@mixin tablet {
+  @media (max-width: #{$tablet}){
+   @content;
+  }
+  }
+  @mixin phone {
+    @media (max-width: #{$phone}){
+     @content;
+    }
+    }

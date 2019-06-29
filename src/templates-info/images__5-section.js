@@ -1,0 +1,26 @@
+export default [
+    {
+        id:"dq239f3g8s8dg",
+        src:require('../images/gymnastic-1.png')
+    },
+    {
+        id:"983qfh4a8hg-94h",
+        src:require('../images/gymnastic-2.png')
+    },
+    {
+        id:"93wtgw38th32th",
+        src:require('../images/gymnastic-3.png')
+    },
+    {
+        id:"8f4e0ghz74h",
+        src:require('../images/gymnastic-4.png')
+    },
+    {
+        id:"d99f07z0gt74g",
+        src:require('../images/gymnastic-5.png')
+    },
+    {
+        id:"89s-f74h3tg347",
+        src:require('../images/gymnastic-6.png')
+    }
+]
