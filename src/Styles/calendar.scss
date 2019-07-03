@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+.calendar__wrapper{
+    transition: all.3s ease-in-out;
+    padding:4rem 1.5rem 4rem 2.5rem;
+text-align: center;
+    button{
+        @include button-secondary;
+    }
+    h3{
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: 300;
+        margin-bottom: 4rem;
+    }
+}
+
+.calendarItem__wrapper{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    &:last-child{
+        margin-bottom: 2rem;
+    }
+    @include phone{
+        margin-bottom: 2rem;
+        flex-direction: column;
+        box-shadow: 0 -5px 5px -5px rgba(128, 128, 128, 0.466);
+        align-items: center;
+    }
+
+    img{
+        border-radius: 100%;
+        box-shadow: $box-shadow;
+        border:1px solid rgba(0, 0, 0, 0.466);
+        @include phone{
+            width:200px;
+        }
+    }
+}
+
+
+
+
+
+.eventDate{
+    position:relative;
+    right:10vw;
+    box-shadow: $box-shadow-top;
+    padding:1.7rem 0rem;
+    display: flex;
+    flex-direction: column;
+    @include phone{
+        right:0;
+        box-shadow: none;
+    }
+}
+
+.eventCity{
+    box-shadow: $box-shadow-top;
+    padding:1.7rem 0rem;
+    display: flex;
+    justify-content: flex-start;
+    @include phone{
+        box-shadow: none;
+        flex-direction: column;
+        max-width: 300px;
+        align-items: center;
+    }
+
+    span{
+        position:relative;
+        display: inline-block;
+        padding:.2rem 4rem;
+        color:white;
+        font-weight: 500;
+        background: linear-gradient(to right , white , $secondary-bg-hover, white);
+        left:5vw;
+        @include phone{
+            left:0;
+            padding:.2rem 5rem;
+        }
+    }
+}
+
+

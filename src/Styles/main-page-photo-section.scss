@@ -1,25 +1,115 @@
 @import './variables.scss';
 
-.main__page-5{
+
+.instagram-header{
+    text-align: center;
+    border-top: 1px solid black;
+    margin:0px;
+    background: linear-gradient(to right,  #3d4246, #3d4246,transparent);
+    color:white;
+    padding:1rem;
+}
+
+
+.images-section{
+    position:relative;
+    background: url('../images/white-pro-fitness-background.jpg');
+    background-size: cover;
     display: grid;
-  
-    grid-gap: 10px;
-    margin: 0 auto;
-    padding:0rem 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    @include phone{
-        grid-template-columns: repeat(auto-fill, 350px);
-     
+
+    grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     justify-items: center;
+    grid-template-areas: 
+    "hero hero med1 med1"
+    "hero hero med2 med3";
+    box-shadow: $box-shadow;
+
+    li{
+        max-width: 90%;
+        transition: all.3s ease-in-out;
+        position: relative;
+        &:hover > .image_links{
+            width:100%;
+            height:100%;
+        }
     }
     img{
-        border-radius: 2px;
-        padding:0px;
-        margin:0px;
-        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.377);
+       
+        border:3px solid white;
     }
-    @include tablet{
-        grid-template-columns: 1fr 1fr ;
+
+}
+
+
+
+.image-item:nth-child(1) {
+    grid-area: hero; 
+    width:100%;
+  
+    img{
+        width:100%;
+        height:100%;
+    }
+
+  }
+
+.image-item:nth-child(2) {
+    grid-area: med1;
+
+    width:100%;
+  
+    img{
+        width:100%;
+        height:100%;
+    }
+
+  }
+  
+  .image-item:nth-child(3) {
+    grid-area: med2; 
+
+    width:100%;
+  
+    img{
+        width:100%;
+        height:100%;
     }
  
+
+}
+  
+  .image-item:nth-child(4) {
+    grid-area: med3; 
+    width:100%;
+   
+    img{
+        width:100%;
+        height:100%;
+    }
+  }
+
+
+
+.image_links{
+    transition: all.3s ease-in-out;
+    position: absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) , rgba(238, 255, 0, 0.336));
+    img{
+        width:40%;
+        height:40%;
+        background: rgba(255, 255, 255, 0.774);
+        border-radius: 70%;
+    }
 }

@@ -1,0 +1,72 @@
+@import './variables.scss';
+
+.contacts__container{
+    background:#eeeeee;
+    box-shadow: $box-shadow;
+    padding-bottom: 8rem;
+    h2{
+    text-align: center;
+    background: #3d4246;
+    color:#ffffff;
+    border-top-right-radius: 60px 20px;
+    margin-bottom: 1rem;
+    }
+    h2 + h3{
+        max-width: 500px;
+        font-weight: 300;
+        text-align: center;
+        margin:0 auto;
+        margin-bottom: 2rem;
+    }
+}
+
+.contacts__info{
+   
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin:0 auto;
+        input{
+            padding:1rem 2rem;
+            margin-bottom: 2rem;
+        }
+        button{
+            @include button-primary;
+          
+            margin:0 auto;
+            padding:.6rem 2rem;
+        }
+    }
+
+    div{
+      p{
+          font-size: 1.3rem;
+          margin-bottom: .7rem;
+          font-weight: 500;
+
+      }
+      p + p {
+          margin-bottom: 2rem;
+      }
+      p + p + p{
+        color:rgba(0, 0, 0, 0.541);
+        font-weight: 300;
+    }
+
+    img{
+        margin:10px;
+        border-radius: 100%;
+        transition:all .3s ease-in-out;
+        &:hover{
+            cursor:pointer;
+            transform: scale(1.1);
+        }
+    }
+    }
+   
+ 
+}

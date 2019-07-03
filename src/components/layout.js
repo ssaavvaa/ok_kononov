@@ -2,19 +2,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import NavBar from './NavBar';
+import Header from "./header";
+import Footer from './Footer';
 import "./layout.css";
-
-
-import "../Styles/main-page-head-section.scss";
-import "../Styles/main-page-second-section.scss";
-import "../Styles/main-page-third-section.scss";
-import '../Styles/main-page-courses-section.scss';
-import '../Styles/main-page-photo-section.scss';
-import '../Styles/main-page-calendar-section.scss';
-import '../Styles/lesson-card.scss';
 import '../Styles/media_rules-font-size.scss';
+
+import "../Styles/header.scss";
+import "../Styles/main-page-second-section.scss";
+import '../Styles/nav-bar.scss';
+import '../Styles/courses.scss';
+import '../Styles/main-page-photo-section.scss';
+import '../Styles/calendar.scss';
+import '../Styles/course-item.scss';
+import '../Styles/blog-section.scss';
+import '../Styles/blog-item.scss';
+import '../Styles/subscribe-form.scss';
+import '../Styles/product-promotion.scss';
+import '../Styles/instructors-section.scss';
+import '../Styles/contacts-section.scss';
+import '../Styles/Footer.scss';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,12 +37,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <NavBar />
+        <main>
+        {children}
+        <Footer />
+        </main>
+       
     </>
   )
 }

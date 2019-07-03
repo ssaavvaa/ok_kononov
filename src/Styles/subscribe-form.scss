@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+.subscribe-form{
+box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.432);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color:white;
+    padding:35px 15px 50px 15px;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(51, 55, 58);
+    background-size: cover;
+    letter-spacing: .2px;
+    text-align: center;
+
+    h2{
+        max-width: 700px;
+        line-height: 1;
+        padding:1rem;
+        text-decoration: underline;
+    }
+    p{
+        max-width: 550px;
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin-bottom: 4rem;
+        padding:1rem;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    input{
+        padding:.8rem 2.5rem;
+        border:0px;
+        border:none;
+        transition: all .3s ease-in-out;
+        &:focus{
+            border-radius: 3px;
+            padding:.8rem 3rem;
+            background: rgb(245, 238, 238);
+            outline:none;
+        }
+ 
+    }
+
+    button{
+       @include button-primary;
+       border-radius: 3px;
+       padding:.8rem 3rem;
+       &:hover{
+        border-radius: 4px;
+    }
+    }
+}

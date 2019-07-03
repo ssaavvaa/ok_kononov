@@ -1,18 +1,22 @@
-import React from "react"
+import React from "react";
 
-import Fade from 'react-reveal/Fade';
+
 
 const SecondSection = () => {
+
     return(
-        <section className="main__page-2">
-          <div className="container">
-              <div className="line"></div>
-        <Fade>
-        <h2>Моя Миссия - вовлекать как можно больше людей в здоровый образ жизни. Своим примером мотивировать к переменам.</h2>
-        </Fade>
-        <div className="line"></div>
+        <div className="main__page-2" >
+            
+        <div className='secondSection__block'>
+        <h3>Моя Миссия - вовлекать как можно больше людей в здоровый образ жизни. Своим примером мотивировать к переменам.</h3>
         </div>
-      </section>
+         <div className='secondSection__block'>
+         <h2 >Общая Физическая подготовка</h2>
+         <p>Программа Тренировок по Гимнастике для Любителей на 4 недели. Начни сейчас</p>
+         <button>Начать тренировки бесплатно</button>
+        </div>
+      
+        </div>
     )
 }
 

@@ -1,34 +1,51 @@
 @import './variables.scss';
 
 .main__page-2{
-    display: flex;
-    justify-content: center;
-    color:rgb(0, 0, 0);
     text-align: center;
-    padding:30px 1rem;
-    max-width: 1000px;
-    margin:0 auto;
-    h2 {
-       font-weight: 400;
-       line-height: 1.7;
-       font-size: 2rem;
-       @include tablet{
-        font-size: 1.7rem;
-      }
-        @include phone{
-        line-height: 1.4;
-        font-size: 1.5rem;
+    background: linear-gradient(to bottom, rgba(50, 55, 58, 0.103), white, white);
+    border-top:2px solid black;
+    padding:4rem 0rem ;
+    display: grid;
+    box-shadow:$box-shadow-bottom;
+    grid-template-columns: 2fr 3fr;
+    h3 {
+        padding:1rem;
+       font-weight: 300;
+       font-size: 1.5rem;
     }
-    
+
+}
+
+.secondSection__block{
+    padding:2.5rem 4rem;
+
+    &:last-child{
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.377), 7px 7px 2px 2px rgba(0, 0, 0, 0.377);
+        background: url('../images/straps.jpg');
+        color:white;
+        font-weight: 700;
+        h2{
+            font-weight: 700;
+            background: black;
+            margin-bottom: 1rem;
+            padding:.3rem;
+        }
+        p{
+            margin-bottom: 1rem;
+        }
+     }
+      button{
+         @include button-primary;
+
     }
 }
 
-.line{
-    width:10vw;
-    height:1px;
-    margin:1.5rem auto;
-    background: black;
-}
+
+
+
+
+
+
 
 
 

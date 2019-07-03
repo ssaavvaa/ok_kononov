@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+.product__promotion{
+    margin-bottom: 4rem;
+    background: url('../images/Gym_2.jpg');
+    background-size: cover;
+    border-top: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    h2{
+        background: white;
+        padding:1rem;
+        margin-right: -2rem;
+        border-top-left-radius: 90px 10px;
+    }
+    img{
+       max-width: 400px;
+    }
+    button{
+
+        @include button-secondary;
+        margin-bottom:1rem;
+    }
+}

@@ -4,15 +4,27 @@ $h2-font-size:2rem;
 $p-font-size:1.1rem;
 $secondary-paragraph:.8rem;
 $roboto: 'Roboto', sans-serif;
+$secondary-bg:#fc8a45;
+$secondary-bg-hover:#dd681f;
 $button-primary-background:#fc8a45;
 $button-primary-hover-background:#dd681f;
-
-$tablet: 1024px;
+$font-opacity:rgba(0, 0, 0, 0.507);
+$box-shadow-bottom:0 4px 2px -2px rgba(0, 0, 0, 0.205);
+$box-shadow-top:0 -5px 5px -5px rgba(128, 128, 128, 0.466);
+$box-shadow:0px 0px 2px 2px rgba(0, 0, 0, 0.205);
+$tablet: 1280px;
 $phone:768px;
+
+
+@mixin input-focus{
+  background: rgb(250, 246, 246);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.411);
+}
 
 @mixin button-primary {
     color:white;
-    border-radius: 30px;
+    padding:1rem 3rem;
+    border-radius: 5px;
     outline:none;
     transition:all .3s ease-in-out;
     border:0px;
@@ -25,17 +37,22 @@ $phone:768px;
   }
 
   @mixin button-secondary {
-    color:white;
-    padding:.5rem 1rem;
-    border-radius: 15px;
+
+    padding:.4rem 1.8rem;
+    border-radius: 2px;
     outline:none;
+    font-weight: 500;
     transition:all .3s ease-in-out;
     border:0px;
     cursor:pointer;
-    background: $button-primary-background;
+    border-top-right-radius: 20px 5px;
+    border-top-left-radius: 20px 5px;
+    border-bottom-left-radius: 20px 5px;
+    border-bottom-right-radius: 10px 20px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.192);
+
     &:hover{
-      transform: scale(1.05);
-      background: $button-primary-hover-background;
+      transform: scale(1.02);
     }
   }
 

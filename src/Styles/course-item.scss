@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.card-lesson{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    button{
+        @include button-secondary;
+    }
+
+    p{
+        margin-bottom: .5rem;
+    }
+    div{
+        margin-bottom:.5rem;
+    }
+}
+
+
+
+.arrow-right{
+    position:absolute;
+    transition: all .3s ease-in-out;
+    width:6rem;
+    height:6rem;
+    top:calc(50% - 3rem);
+    right:-6rem;
+}
+
+.arrow-left{
+    transition: all .3s ease-in-out;
+    position:absolute;
+    width:6rem;
+    height:6rem;
+    top:calc(50% - 3rem);
+    left:-6rem;
+}
+
+.arrow-right, .arrow-left{
+    border-radius: 3px;
+}
+
+.arrow-right, .arrow-left:hover{
+    cursor:pointer;
+   
+}
