@@ -5,6 +5,10 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+    img{
+        width:250px;
+        height:250px;
+    }
     button{
         @include button-secondary;
     }

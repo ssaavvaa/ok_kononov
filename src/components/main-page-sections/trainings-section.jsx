@@ -1,11 +1,13 @@
 import React  from "react"
-import CardInfo from '../../templates-info/lesson_card';
-
+import CardInfo from '../../templates-info/training_program';
+import { navigate } from '@reach/router';
 
 import { TimelineLite } from 'gsap/all';
 const animate = new TimelineLite();
 
-
+const navigateTo = e => {
+  navigate(`/training-programs/training?_id=${e}`,{state:{e}});
+}
 
 class CoursesSection extends React.Component {
 
@@ -72,12 +74,16 @@ componentWillUnmount(){
 }
 
   render(){
-    const {heading,description,target,level,img_src,isFree,price,alt,old_price} = CardInfo[this.state.current]
+    const { _id , heading , description , target , level , main_img , 
+            isFree , price , alt , old_price 
+          } = CardInfo[this.state.current]
+
+
     return(
         <div className = "container courses_wrapper" onMouseEnter={this.onEnter.bind(this)} onMouseLeave={this.onLeave.bind(this)} >
          <h2>Choose your program</h2>
         <figure ref={img => this.image = img} className="card-lesson">
-         <img alt= {alt}  src={img_src}/>
+         <img alt= {alt}  src={main_img}/>
          <figcaption>
            <h3>{heading}</h3>
            <p><small>{description}</small></p>
@@ -89,7 +95,7 @@ componentWillUnmount(){
                 <span style={{fontSize:'1.2rem', color:'grey'}}><del>{old_price && `${old_price}`}</del></span>
              </div>
            :<p>Бесплатно</p>}
-           <button><small>Подробнее</small></button>
+           <button onClick={() => navigateTo(_id)}><small>Подробнее</small></button>
            </figcaption>
       </figure>
       <img alt='arrow-right' src={require('../../images/arrow-right.png')} className = "arrow-right" onClick = {this.toRight.bind(this)}></img>

@@ -4,6 +4,7 @@ $h2-font-size:2rem;
 $p-font-size:1.1rem;
 $secondary-paragraph:.8rem;
 $roboto: 'Roboto', sans-serif;
+$background_red:#fc8a45;
 $secondary-bg:#fc8a45;
 $secondary-bg-hover:#dd681f;
 $button-primary-background:#fc8a45;
@@ -45,14 +46,12 @@ $phone:768px;
     transition:all .3s ease-in-out;
     border:0px;
     cursor:pointer;
-    border-top-right-radius: 20px 5px;
-    border-top-left-radius: 20px 5px;
-    border-bottom-left-radius: 20px 5px;
-    border-bottom-right-radius: 10px 20px;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.192);
+
+    box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.397);
 
     &:hover{
       transform: scale(1.02);
+      background: rgba(128, 128, 128, 0.39);
     }
   }
 

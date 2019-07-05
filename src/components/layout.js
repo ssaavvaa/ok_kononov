@@ -21,7 +21,10 @@ import '../Styles/subscribe-form.scss';
 import '../Styles/product-promotion.scss';
 import '../Styles/instructors-section.scss';
 import '../Styles/contacts-section.scss';
+import '../Styles/trainings_page.scss';
 import '../Styles/Footer.scss';
+import '../Styles/training_landing.scss';
+import '../Styles/instructor_page.scss';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

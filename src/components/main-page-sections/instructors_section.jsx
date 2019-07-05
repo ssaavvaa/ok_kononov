@@ -12,6 +12,7 @@ const InstructorsSection = () => {
                  <ul>
                  {Instructors.map(info => (
                   <Instructor 
+                  url_name={info.url_name}
                   key={info._id} 
                   name={info.name} 
                   family_name={info.family_name}
@@ -22,6 +23,7 @@ const InstructorsSection = () => {
                    />
                  ))}
                  </ul>
+             
         </section>
    
     )
