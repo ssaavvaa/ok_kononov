@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-blog-template-js","path":"/blog/anton","webpackCompilationHash":"a58e134636cca78015ea","result":{"data":{"markdownRemark":{"html":"<h1>anton champion</h1>","frontmatter":{"date":"June 04, 2019","path":"/blog/anton","title":"Anton Champion"}}},"pageContext":{"isCreatedByStatefulCreatePages":false}}}
+{"componentChunkName":"component---src-templates-blog-template-js","path":"/blog/anton","webpackCompilationHash":"","result":{"data":{"markdownRemark":null},"pageContext":{"isCreatedByStatefulCreatePages":false}}}
