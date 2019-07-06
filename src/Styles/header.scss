@@ -55,11 +55,13 @@
 
 .arrow__down{
     font-size: 3rem;
+    display: inline-block;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    background: transparent;
     bottom:3vh;
     animation: move_arrow 2s infinite;
 }

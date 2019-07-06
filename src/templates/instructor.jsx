@@ -1,12 +1,17 @@
 import React from 'react';
 import { navigate } from '@reach/router';
+import { prefix } from '../components/helpers';
 
-const navigateToInstructor = e => {
-    navigate(`/instructor?name=${e}`, {state:e});
-  }
+
+
 
 
 const Instructor = ({ url_name, img, alt, name, family_name, position, description }) => {
+
+    const navigateToInstructor = e => {
+        navigate(`${prefix}/instructor?name=${e}`, {state:e});
+      }
+
     return (
         <li onClick = {() => navigateToInstructor(url_name)}>
             <img alt={alt} src ={img} />

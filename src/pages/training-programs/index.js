@@ -1,9 +1,10 @@
 import React , { Fragment, useState, useEffect } from "react";
-import SEO from "../../components/seo"
+import SEO from "../../components/seo";
+import Fade from 'react-reveal/Fade';
 import Layout from "../../components/layout";
 import trainingCard from '../../templates-info/training_program';
 import { navigate } from '@reach/router';
-
+import {prefix} from '../../components/helpers';
 
 
 
@@ -100,7 +101,7 @@ const onInput = e => {
 }
 
 const navigateTo = e => {
-  navigate(`/training-programs/training?_id=${e}`,{state:{e}});
+  navigate(`${prefix}/training-programs/training?_id=${e}`,{state:{e}});
 }
 
 
@@ -140,6 +141,7 @@ return(
     </div>
 
     <ul>
+    <Fade>
     {trainings.length > 0 &&
      trainings.map(training => (
       <li onClick={() => navigateTo(training._id)} key={training._id}>
@@ -148,14 +150,15 @@ return(
       <figcaption>
         <p><small>{training.description}</small></p>
       {training.isFree && <span>Бесплатно</span>}
-      {training.old_price && <Fragment><span>{training.price}{" "}</span><span><del>{training.old_price}</del></span></Fragment>}
-      {!training.old_price && <span>{training.price}</span>}
+      {training.old_price && <Fragment><span>${training.price}{" "}</span><span><del>${training.old_price}</del></span></Fragment>}
+      {(!training.old_price && !training.isFree) &&  <span>${training.price}</span>}
       </figcaption>
       </figure>
       <span className="view_training">view</span>
       </li>
     ))
   }
+    </Fade>
     </ul>
     {!trainings.length  && 
   <p className="nothing_found_in_trainings">Ничего не найдено по вашему запросу</p>

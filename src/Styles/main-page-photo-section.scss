@@ -1,49 +1,52 @@
 @import './variables.scss';
 
 
-.instagram-header{
-    text-align: center;
-    border-top: 3px solid black;
-    margin:0px;
-    background: rgba(0, 0, 0, 0.911);
-    color:white;
-    padding:1rem;
-}
 
+
+.insta_photos_section{
+    padding:0rem 0rem 0rem 1rem;
+    position:relative;
+}
 
 .images-section{
     position:relative;
     background: url('../images/white-pro-fitness-background.jpg');
     background-size: cover;
     display: grid;
-    grid-gap: 3px;
-    padding:2rem 10rem 2rem 10.5rem;
+grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
      grid-template-rows: repeat(2, 1fr);
      justify-items: center;
     grid-template-areas: 
     "hero hero med1 med1"
     "hero hero med2 med3";
-    box-shadow: $box-shadow;
+ 
 
-    li{
-        max-width: 90%;
-      
-    }
 
+}
+
+.instagram-header{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 10;
+    background:rgb(255, 255, 255);
+    max-width: 700px;
+    padding-left: 11rem;
 
 }
 
 
 .image-item{
     width:100%;
+ 
     height:100%;
     transition: all.3s ease-in-out;
     position: relative;
     &:hover > .image_links{
         opacity:1;
     }
-    
     img{
         width:100%;
         height:100%;
@@ -56,7 +59,6 @@
 
 .image-item:nth-child(2) {
     grid-area: med1;
-
   }
 
   .image-item:nth-child(3) {

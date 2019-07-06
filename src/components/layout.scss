@@ -1,3 +1,6 @@
+
+
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -625,6 +628,13 @@ main {
   z-index: 3;
 }
 
+button{
+  background: white;
+  border:none;
+  border:0px;
+  outline:0px;
+}
+
 .visually-hidden {
   position: absolute !important;
   height: 1px; width: 1px;
@@ -646,6 +656,14 @@ main {
 
 .ScrollUpButton{
   width:200px;
+}
+
+.fa-instagram , .fa-facebook-f , .fa-vk {
+  font-size: 25px; 
+  margin:5px;
+  &:hover{
+      cursor:pointer;
+  }
 }
 
 

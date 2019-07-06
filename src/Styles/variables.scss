@@ -6,6 +6,8 @@ $secondary-paragraph:.8rem;
 $roboto: 'Roboto', sans-serif;
 $background_red:#fc8a45;
 $secondary-bg:#fc8a45;
+$background_light:#eeeeee;
+$border_light:hsla(0, 0%, 0%, 0.1);
 $secondary-bg-hover:#dd681f;
 $button-primary-background:#fc8a45;
 $button-primary-hover-background:#dd681f;
@@ -15,6 +17,7 @@ $box-shadow-top:0 -5px 5px -5px rgba(128, 128, 128, 0.466);
 $box-shadow:0px 0px 2px 2px rgba(0, 0, 0, 0.205);
 $tablet: 1280px;
 $phone:768px;
+$text-shadow:0px 0px 2px rgba(0, 0, 0, 0.548);
 
 
 @mixin input-focus{
@@ -46,12 +49,12 @@ $phone:768px;
     transition:all .3s ease-in-out;
     border:0px;
     cursor:pointer;
-
+    background: hsla(0, 0%, 50%, 0.39);
     box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.397);
 
     &:hover{
       transform: scale(1.02);
-      background: rgba(128, 128, 128, 0.39);
+      background: hsla(0, 0%, 50%, 0.473);
     }
   }
 

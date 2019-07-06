@@ -2,41 +2,34 @@
 
 .main__page-2{
     text-align: center;
-    background: linear-gradient(to bottom, rgba(50, 55, 58, 0.103), white, white);
+    background: linear-gradient(to bottom, $background_light, white, white);
     border-top:2px solid black;
-    padding:4rem 0rem ;
     display: grid;
-    box-shadow:$box-shadow-bottom;
     grid-template-columns: 2fr 3fr;
-    h2 {
-        padding:1rem;
-       font-weight: 300;
-     
-    }
-
+    padding-top:2rem;
 }
 
 .secondSection__block{
-    padding:2.5rem 4rem;
-
-    &:last-child{
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.377), 7px 7px 2px 2px rgba(0, 0, 0, 0.377);
-        background: url('../images/trusted_bg2.jpg');
+    padding:2.5rem;
+      &:first-child{
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      &:last-child{
+        background: url('../images/white-pro-fitness-background_2.jpg');
         color:white;
         font-weight: 700;
-        h2{
-            font-weight: 700;
-            background: black;
+         h2{
+             background: hsla(0, 0%, 0%, 0.61);
+             margin-bottom: 1rem;
+             padding:.3rem;
+         }
+         p{
             margin-bottom: 1rem;
-            padding:.3rem;
-        }
-        p{
-            margin-bottom: 1rem;
-        }
+         }
      }
-      button{
+     button{
          @include button-primary;
-
     }
 }
 

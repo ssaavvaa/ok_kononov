@@ -3,6 +3,10 @@ import React from "react";
 import Layout from "../../components/layout";
 
 
+const style ={
+    fontSize:'30px'
+}
+
 const ContactsPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -16,9 +20,10 @@ const ContactsPage = () => (
                 <p>oleksiykononovb2c@gmail.com</p>
                 <p><small>8400 2nd Avenue, 22, Montreal, QC H1Z 4M6 Alegria</small></p>
                 <div>
-                    <img alt = 'facebook' src = {require('../../images/icons/facebook.png')} />
-                    <img alt = 'vkontakte' src = {require('../../images/icons/vk.png')} />
-                    <img alt = 'instagramm' src = {require('../../images/icons/insta.png')} />
+                <i className="fab fa-facebook-f" style={style}></i>
+                <i className="fab fa-instagram" style={style}></i>
+                <i className="fab fa-vk" style={style}></i>
+
                 </div>
             </div>
             <form>

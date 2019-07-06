@@ -1,12 +1,17 @@
 import React  from "react"
 import CardInfo from '../../templates-info/training_program';
 import { navigate } from '@reach/router';
+import { prefix } from '../../components/helpers';
+import { TimelineLite , CSSPlugin, ScrollToPlugin, } from 'gsap/all';
 
-import { TimelineLite } from 'gsap/all';
 const animate = new TimelineLite();
 
+//eslint-disable-next-line
+const plugins = [CSSPlugin, ScrollToPlugin]; 
+
+
 const navigateTo = e => {
-  navigate(`/training-programs/training?_id=${e}`,{state:{e}});
+  navigate(`${prefix}/training-programs/training?_id=${e}`,{state:{e}});
 }
 
 class CoursesSection extends React.Component {
@@ -87,21 +92,20 @@ componentWillUnmount(){
          <figcaption>
            <h3>{heading}</h3>
            <p><small>{description}</small></p>
-           <p><strong style={{fontSize:'1rem'}}><u>Цель:</u>{" "}</strong><small>{target}</small></p>
-           <p><strong style={{fontSize:'1rem'}}><u>Уровень:</u>{" "} </strong><small>{level}</small></p>
+           <p><strong ><u>Цель:</u>{" "}</strong><small>{target}</small></p>
+           <p><strong ><u>Уровень:</u>{" "} </strong><small>{level}</small></p>
            {!isFree
             ?<div>
                 <span>${price}</span>{" "}
-                <span style={{fontSize:'1.2rem', color:'grey'}}><del>{old_price && `${old_price}`}</del></span>
+                <span ><del>{old_price && `${old_price}`}</del></span>
              </div>
            :<p>Бесплатно</p>}
            <button onClick={() => navigateTo(_id)}><small>Подробнее</small></button>
            </figcaption>
       </figure>
-      <img alt='arrow-right' src={require('../../images/arrow-right.png')} className = "arrow-right" onClick = {this.toRight.bind(this)}></img>
-           <img alt='arrow-left' src={require('../../images/arrow-left.png')} className = "arrow-left" onClick = {this.toLeft.bind(this)}></img>
+      <button className='arrow-right' onClick = {this.toRight.bind(this)}><i className="fas fa-chevron-right "></i></button>
+      <button className='arrow-left' onClick = {this.toLeft.bind(this)}><i className="fas fa-chevron-left"></i></button>
       </div>
-  
     )
   }
 }

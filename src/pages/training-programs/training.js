@@ -12,12 +12,14 @@ const initialState = {
     alt_current_picture:''
 }
 
-const navigateToInstructor = e => {
-    navigate(`/instructor?name=${e}`);
-  }
+
 
 const Training = ({location}) => {
 
+
+    const navigateToInstructors = e => {
+        navigate(`/instructor?name=${e}`,{state:e});
+      }
 
     const id = location.search.split('_id=')[1];
 
@@ -93,7 +95,7 @@ return (
          {state.training.single_page.instructor && 
                       <Fragment>
                           <h3>Инструктор</h3>
-                          <p onClick ={() => navigateToInstructor(state.training.single_page.link_instructor)}
+                          <p onClick ={() => navigateToInstructors(state.training.single_page.link_instructor)}
                           style={{color:'blue', textDecoration:'underline', cursor:'pointer'}}>
                           {state.training.single_page.instructor}
                           </p>

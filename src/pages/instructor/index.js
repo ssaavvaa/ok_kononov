@@ -38,14 +38,14 @@ const Instructor = (props) => {
 
        },[props.location.search]);
 
-const { name , family_name,  single_page_img ,p_1 , p_2 , p_3 , p_4 } = state.instructor
+const { name , family_name,  single_page_img ,p_1 , p_2 , p_3 , p_4 , gender } = state.instructor
 
     return (
         <Layout>
         <SEO title="Instructor" />
         <div className="container container_instructor">
 
-            <h1>{name}{" "}{family_name}</h1>
+            <h1 className = { gender === 'female'?'shapka_female':'shapka_male'}>{name}{" "}{family_name}</h1>
             <img src ={single_page_img} alt="instructor_photo" />
             {p_1 && <h3>{p_1}</h3>}
             {p_2 && <p>{p_2}</p>}

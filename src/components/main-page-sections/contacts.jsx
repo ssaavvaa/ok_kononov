@@ -12,10 +12,10 @@ const Contacts = () => {
                 <p>oleksiykononovb2c@gmail.com</p>
                 <p><small>8400 2nd Avenue, 22, Montreal, QC H1Z 4M6 Alegria</small></p>
                 <div>
-                    <img alt = 'facebook' src = {require('../../images/icons/facebook.png')} />
-                    <img alt = 'vkontakte' src = {require('../../images/icons/vk.png')} />
-                    <img alt = 'instagramm' src = {require('../../images/icons/insta.png')} />
-                </div>
+            <i className="fab fa-facebook-f" ></i>
+            <i className="fab fa-instagram" ></i>
+            <i className="fab fa-vk" ></i>
+        </div>
             </div>
             <form>
                 <input type="email" placeholder="Твой Email" />

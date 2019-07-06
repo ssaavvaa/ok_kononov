@@ -13,6 +13,8 @@ import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 
 import SEO from "../components/seo";
 
+
+
 const scroll_button = {
   width:'55px',
   height:'55px',

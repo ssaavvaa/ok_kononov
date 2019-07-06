@@ -1,6 +1,7 @@
 export default [
     {
         _id:'wff7e93223g87sEGg',
+        gender:'female',
         img:require('../images/instructors/kononova.png'),
         single_page_img:require('../images/instructors/kononova_big.png'),
         alt:'kononova',
@@ -16,6 +17,7 @@ export default [
     },
     {
         _id:'wff7e9gsg87sEGg',
+        gender:'male',
         img:require('../images/instructors/kononov.png'),
         single_page_img:require('../images/instructors/kononov_big.png'),
         alt:'kononov',
@@ -31,6 +33,7 @@ export default [
     },
     {
         _id:'wff7eda2f29gsg87sEGg',
+        gender:'male',
         img:require('../images/instructors/okhotenko.png'),
         single_page_img:require('../images/instructors/okhotenko_big.png'),
         alt:'Aleksandr',
@@ -45,6 +48,7 @@ export default [
         img:require('../images/instructors/koltakov.png'),
         single_page_img:require('../images/instructors/koltakov_big.png'),
         alt:'Alexey',
+        gender:'male',
         url_name:'alex_koltakov',
         name:'Алексей',
         family_name:'Колтаков',

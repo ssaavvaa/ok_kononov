@@ -14,7 +14,9 @@ const BlogItem = ({alt, src , date , heading , description}) => {
     return(
      
        <figure className='blog__item-wrapper'>
+         <div>
         <img alt={alt} ref={ref} src={inView?src:''}></img>
+        </div>
         <figcaption>
         <p><small>{date}</small></p>
         <h3>{heading}</h3>

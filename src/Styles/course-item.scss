@@ -9,10 +9,6 @@
         width:250px;
         height:250px;
     }
-    button{
-        @include button-secondary;
-    }
-
     p{
         margin-bottom: .5rem;
     }
@@ -26,17 +22,19 @@
 .arrow-right{
     position:absolute;
     transition: all .3s ease-in-out;
-    width:6rem;
-    height:6rem;
+   font-size: 6rem;
+   display: inline-block;
+   padding:.5rem;
     top:calc(50% - 3rem);
     right:-6rem;
 }
 
 .arrow-left{
-    transition: all .3s ease-in-out;
     position:absolute;
-    width:6rem;
-    height:6rem;
+    transition: all .3s ease-in-out;
+   font-size: 6rem;
+   display: inline-block;
+   padding:.5rem;
     top:calc(50% - 3rem);
     left:-6rem;
 }

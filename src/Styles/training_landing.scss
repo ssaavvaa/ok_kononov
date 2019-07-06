@@ -126,8 +126,8 @@
         top:-2.5rem;
         background: $background_red;
         color:white;
-        border:1px solid black;
-        box-shadow: 0px 0px 1.1px 1px rgba(0, 0, 0, 0.842);
+      
+        box-shadow: 0px 0px 1.1px 1px $background_light;
         right:calc(50% - 1.25rem);
         font-size: 3rem;
         z-index:-2;
@@ -155,8 +155,8 @@
   
     text-align: center;
     box-shadow: $box-shadow-bottom;
-    background: linear-gradient(to right, white, #141516 ,#141516 , white);
-    color:white;
+    background: linear-gradient(to right, white, $background_light);
+
 }
 
 .h2_training:nth-of-type(2){
@@ -164,8 +164,7 @@
   
     margin-bottom: 4rem;
     box-shadow: $box-shadow-bottom;
-    background: linear-gradient(to right, white, #141516 ,#141516 , white);
-    color:white;
+    background: linear-gradient(to left, white, $background_light);
  
 }
 
@@ -174,8 +173,7 @@
      
         margin-bottom: 4rem;
         box-shadow: $box-shadow-bottom;
-        background: linear-gradient(to right, white, #141516 ,#141516 , white);
-        color:white;
+        background: linear-gradient(to right, white, $background_light);
     }
 
     .h2_training-last{
@@ -183,8 +181,7 @@
       
         margin-bottom: 2rem;
         box-shadow: $box-shadow-bottom;
-        background: linear-gradient(to right, white, #141516 ,#141516 , white);
-        color:white;
+        background: linear-gradient(to right, white, $background_light);
 
     }
 

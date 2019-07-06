@@ -1,25 +1,22 @@
 @import './variables.scss';
 
 .blog-wrapper{
-
     text-align: center;
-    
-    margin-top:2rem;
-    margin-bottom: 2rem;
+    background: linear-gradient(to top , $background_light ,$background_light, white);
     h2{
-        background: linear-gradient(to right, #ffffff, #ffffff);
-        padding: .5rem 0rem;
+        background: linear-gradient(to right, #ffffff,$background_light);
         color:#000000dc;
-
+        text-align: right;
+        padding-right: 10rem;
     }
-    background: url('../images/blog.jpg');
+
     background-size: cover;
     &-container{
         max-width: 1200px;
         margin: 0 auto;
         justify-content: center;
         display: grid;
-        grid-gap: 100px;
+        grid-gap: 30px;
         grid-template-columns: 1fr 1fr ;
         padding:1rem;
         @include phone {
@@ -30,17 +27,19 @@
     img{
         border-radius: 2px;
         box-shadow: $box-shadow;
+        width:100%;
+        height:auto;
     }
 
 }
 
 .redirect_page{
     p{
-        font-size: 1.5rem;
         font-weight: 500;
-        text-decoration: underline;
+     
         background: white;
         padding:10px 30px;
+        border-top:1px solid black;
         transition: all .3s ease-in-out;
         &:hover{
             cursor: pointer;
@@ -49,21 +48,16 @@
             border-radius: 4px;
         }
     }
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
 
 }
 
 
 @keyframes move_arrow {
     0% {position: relative;
-  
         bottom:1vh; }
     50% { position: relative;
-     
         bottom:-1vh;  }
     100%{position: relative;
          bottom:1vh; }

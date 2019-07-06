@@ -1,27 +1,37 @@
 @import './variables.scss';
 
 .product__promotion{
-    margin-bottom: 4rem;
-    background: url('../images/Gym_2.jpg');
-    background-size: cover;
-    border-top: 3px solid black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    h2{
-        background: white;
-        padding:2rem;
-        font-size: 1.5rem;
-        margin-right: -2rem;
-        border-top-left-radius: 90px 10px;
-    }
-    img{
-       max-width: 300px;
-    }
+   padding:0rem 0rem 0rem 1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    h2{ color:white; }
+    img{ max-width: 300px; }
     button{
-
         @include button-secondary;
         margin-bottom:1rem;
+        
+        background: rgb(238, 229, 229);
+           &:hover{ background: rgb(230, 219, 219); }
     }
+}
+
+.divider_promotion{
+
+    width:100%;
+    height:100%;
+    text-align: center;
+    padding:20px;
+      &:last-child{
+        background: url('../images/gym-banner-01.png');  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      &:first-child{
+         background: url('../images/Gym_2.jpg');
+    
+   }
 }

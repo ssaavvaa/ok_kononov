@@ -1,0 +1,85 @@
+@import './variables.scss';
+
+.container_feedback{
+    min-height: 100vh;
+    h1{
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: $box-shadow-bottom;
+    }
+
+    ul{
+
+        li{
+            h3{
+                margin-bottom: .5rem;
+            }
+            p{
+                margin-bottom: .5rem;
+            }
+         margin-bottom: 2rem;
+            img{
+                border-radius: 100%;
+                width:80px;
+                height:80px;
+                margin:10px;
+            }
+        }
+    }
+}
+
+.even_feedback{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.uneven_feedback{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.talk-bubble {
+    margin: 10px;
+    padding:30px 30px 10px 30px;
+    display: inline-block;
+    position: relative;
+	width: 600px;
+ 
+	background-color: #eeeeee;
+}
+
+.talk-bubble_2 {
+    margin: 10px;
+    padding:30px 30px 10px 30px;
+    display: inline-block;
+    position: relative;
+	width: 600px;
+	background-color: #eeeeee;
+}
+
+.talk-bubble:after{
+	content: ' ';
+	position: absolute;
+    right: -20px;
+	top:0px;
+	border: 12px solid;
+	border-color: #eeeeee transparent transparent #eeeeee;
+}
+
+.talk-bubble_2:after{
+	content: ' ';
+	position: absolute;
+    left: -20px;
+	top:0px;
+	border: 12px solid;
+	border-color: #eeeeee #eeeeee transparent transparent ;
+}
+
+.soc_logo_feedback{
+    width:25px!important;
+    height:30px!important;
+}
+
+
+
