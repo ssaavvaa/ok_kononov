@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 footer{
   
     display: flex;
@@ -8,6 +10,9 @@ footer{
     padding:1rem 1.5rem 1rem 2.5rem;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+        flex-direction: column;
+    }
  
     ul{
         max-width: 500px;

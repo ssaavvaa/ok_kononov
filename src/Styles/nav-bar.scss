@@ -1,7 +1,8 @@
 @import './variables.scss';
 .navbar{
     height:100vh;
-   overflow: auto;
+ 
+   transition: all .3s ease-in-out;
     position:fixed;
     width:165px;
     text-align: center;
@@ -14,8 +15,29 @@
     padding-bottom: 30px;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.445);
     background: rgb(252, 249, 249);
+    @include phone {
+          width:195px;
+         right:-195px;
+         left:auto;
+         overflow: scroll;
+
+      }
+
+.nav_ul{
+    li:last-child{
+        margin-bottom: 10px;
+    }
+    @include phone {
+     border-bottom:1px solid rgba(0, 0, 0, 0.192);
+
+    }
+}
+
     img{
         padding:40px 10px;
+        @include phone {
+            padding:10px;
+        }
     }
 
     a{
@@ -46,12 +68,30 @@
         &:last-child{
             margin-bottom: 2rem;
         }
+        @include phone {
+            &:hover > .aside_ul{
+                display: none;
+            }
+         }
     }
 
     }
 
 
-
+.cross_bar{
+    position:absolute;
+    top:0;
+    z-index:1000;
+    left:0;
+    background: rgba(228, 204, 204, 0.459);
+    font-size: 40px;
+    display: none;
+    @include phone {
+        display:initial;
+        padding:0px 10px;
+        border: .3px solid black;
+     }
+}
 
 
     .sub_li_desc{
@@ -75,18 +115,20 @@
 
     .aside_ul{
         position:fixed;
+ 
         display: none;
         color:white;
         width:165px;
         height:100vh;
          top:0;
-        left:140px;
+        left:138px;
+        right: auto;
         background: rgba(0, 0, 0, 0.897);
-     
         li{
             position:relative;
             padding: .5rem;
             border-bottom: 1px solid white;
+    
         }
         li:hover > .sub_li_desc{
             display: initial;
@@ -101,6 +143,43 @@
         li:hover a {
             color:black;
         }
+        @include phone {
+            background: transparent;
+            position:static;
+            display: none;
+            width:100%;
+            height:auto;
+            padding:0px;
+            margin:0px;
+            margin-top: 10px;
+            li{
+                background:$bg_three;
+                border-radius: 5px;
+                border:1px solid white;
+                margin:1px;
+                border-bottom: 0px;
+            &:last-child{
+                    margin:0px;
+                }
+            &:first-of-type{
+                border-top-right-radius: 8px 30px;
+                border-top-left-radius: 8px 30px;
+            }    
+
+            &:hover{
+                    background: white;
+                    cursor:pointer;
+                    border:1px solid rgba(0, 0, 0, 0.329);
+                    box-shadow: none;
+            }
+            }
+            img{
+                display: none;
+            }
+            li:hover > .sub_li_desc{
+                display: none;
+            } 
+        }
     }
 
 
@@ -108,6 +187,9 @@
 
     .sign_in, .sign_out{
         padding:10px 0px;
+        @include phone {
+            padding: 0px;
+         }
         span{
             margin-right:10px;
         }
@@ -119,6 +201,13 @@
 
     }
 
+    .aside_bottom_block{
+        @include phone {
+  
+            margin-top: 10px;
+         }
+    }
+
     .aside_bottom{
     img{
         padding:0px;
@@ -128,5 +217,8 @@
         select{
             width:90%;
             margin-bottom: 2rem;
+            @include phone {
+                margin-bottom: 1rem;
+             }
         }
     }

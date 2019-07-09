@@ -3,28 +3,52 @@
 .header{
     background:url('../images/Group-X-Background-Image-01.jpg');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     text-align: right;
     min-height: 100vh;
+    position: relative;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.178);
+    h4{
+        @include phone {
+            padding:5px;
+            margin:-5px;
+       text-align: left;
+     }
+    }
     h1{
         background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.781),rgba(0, 0, 0, 0.925));
         border-top:2px solid rgb(0, 0, 0);
-      color:white;
-     
+        color:white;
         @include tablet{
             font-size: 1.5rem;
         }
+        @include phone {
+            padding:5px;
+            margin:-5px;
+            padding:.3rem;
+            text-align: left;
+          }
     }
     h3{
         border-top:2px solid rgba(0, 0, 0, 0.363);
         padding:1rem 0rem;
+        @include phone {
+            padding:5px;
+            margin:-5px;
+                 background: rgba(255, 255, 255, 0.781);
+            text-align: left;
+          }
     }
+
+  
 }
 
 .header__desc{
    display: grid;
    grid-template-columns: 2fr 1fr;
- 
+   @include phone {
+    display: none;
+  }
 }
 
 
@@ -43,6 +67,9 @@
     text-align: center;
 
       max-width:500px;
+      @include phone {
+        display: none;
+      }
     figcaption{
         background: #ddb23bdc;
         padding:1rem;
@@ -55,15 +82,15 @@
 
 .arrow__down{
     font-size: 3rem;
-    display: inline-block;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+    width:4rem;
     background: transparent;
-    bottom:3vh;
-    animation: move_arrow 2s infinite;
+    animation: move__arrow 2s infinite;
+    position: absolute;
+   left:calc(50% - 2rem);
+   margin-left: auto;
+   margin-right: auto;
+   bottom:2vh;
+
 }
 
 .arrow__down:hover{
@@ -72,30 +99,9 @@
 
 
 
-@keyframes move_arrow {
-    0% {position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        bottom:3vh; }
-    50% { position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        bottom:2vh;  }
-    100%{position: absolute;
-         margin-left: auto;
-         margin-right: auto;
-         left: 0;
-         right: 0;
-         bottom:3vh; }
+@keyframes move__arrow {
+    0% {bottom:3vh; }
+    50% {bottom:2vh;  }
+    100%{bottom:3vh; }
   }
 
-@media screen and (max-width: 992px) {
-    .main__page-1 h1 {
-        line-height: 1.2;
-    }
-
-  }

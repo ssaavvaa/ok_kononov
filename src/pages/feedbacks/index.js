@@ -2,10 +2,24 @@ import React  from "react";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import FeedbackInfo from '../../templates-info/feedbacks';
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+
+const scroll_button = {
+  width:'55px',
+  height:'55px',
+  padding:"4px",
+  focus:'none',
+  outline:'none',
+  border:'0px',
+  boxShadow:'0px 0px 2px 2px black',
+  zIndex:100
+}
+
 
 const Feedbacks = () => (
     <Layout>
       <SEO title="Home" />
+      <ScrollUpButton style={scroll_button} />
 
 <div className="container container_feedback">
   <h1>Отзывы</h1>

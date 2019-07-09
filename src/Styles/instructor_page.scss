@@ -4,11 +4,12 @@
 .container_instructor{
     margin-bottom: 4rem;
     min-height: 100vh;
+    @include tablet {
+        margin-bottom: 2rem;
+    }
     h1{
-        
         text-align: center;
         margin-bottom: 2rem;
- 
         border-top-right-radius:20px 90px; 
         border-top-left-radius:20px 90px; 
         border-bottom-left-radius:10px 90px; 
@@ -17,13 +18,11 @@
     }
 
     .shapka_female{
-     
         background: #eeeeee;
     }
 
     .shapka_male{
         background:#eeeeee;
-     
     }
 
     h2{

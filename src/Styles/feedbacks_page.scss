@@ -2,6 +2,7 @@
 
 .container_feedback{
     min-height: 100vh;
+   
     h1{
         text-align: center;
         margin-bottom: 2rem;
@@ -17,7 +18,7 @@
             p{
                 margin-bottom: .5rem;
             }
-         margin-bottom: 2rem;
+        
             img{
                 border-radius: 100%;
                 width:80px;
@@ -25,6 +26,13 @@
                 margin:10px;
             }
         }
+        li:last-child{
+            margin-bottom: 3rem;
+        }
+        @include phone{
+            margin-top: -4rem;
+        }
+       
     }
 }
 
@@ -32,21 +40,66 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+   
+ 
+    @include phone{
+        margin-bottom: -3rem;
+        flex-direction: column;
+        align-items: center;
+        img{
+        position:relative;
+        top:60px;
+        box-shadow: 0px 0px 2px 2px black;
+        z-index: 100;
+        }
+        h3{
+            margin-top: 2rem;
+        }
+
+    }
 }
 .uneven_feedback{
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
+    @include phone{
+        margin-bottom: -3rem;
+        flex-direction: column;
+        align-items: center;
+        img{
+        position:relative;
+        top:60px;
+      
+        box-shadow: 0px 0px 2px 2px rgb(82, 77, 77);
+        z-index: 100;
+        }
+        h3{
+            margin-top: 2rem;
+        }
+
+    }
 }
+
+.talk-bubble, .talk-bubble_2 {
+    p{
+        @include phone{
+            font-size: .8rem;
+
+        }
+    }
+
+}
+
 
 .talk-bubble {
     margin: 10px;
     padding:30px 30px 10px 30px;
     display: inline-block;
     position: relative;
-	width: 600px;
- 
-	background-color: #eeeeee;
+    max-width: 600px;
+    background-color: #eeeeee;
+
+    
 }
 
 .talk-bubble_2 {
@@ -54,8 +107,9 @@
     padding:30px 30px 10px 30px;
     display: inline-block;
     position: relative;
-	width: 600px;
-	background-color: #eeeeee;
+	max-width: 600px;
+    background-color: #eeeeee;
+  
 }
 
 .talk-bubble:after{

@@ -1,9 +1,10 @@
 import React from "react"
 import { useInView } from 'react-intersection-observer';
+import { navigate } from '@reach/router';
+import { prefix } from '../components/helpers';
 
 
-
-const BlogItem = ({alt, src , date , heading , description}) => {
+const BlogItem = ({alt, src , link , date , heading , description}) => {
 
   const [ref, inView] = useInView({
     triggerOnce:true,
@@ -11,9 +12,12 @@ const BlogItem = ({alt, src , date , heading , description}) => {
     rootMargin:"50px"
   })
 
+  const redirectToArticle = e => {
+    navigate(`${prefix}/blog/${e}`);
+  }
+
     return(
-     
-       <figure className='blog__item-wrapper'>
+       <figure className='blog__item-wrapper' onClick = {() => redirectToArticle(link)}>
          <div>
         <img alt={alt} ref={ref} src={inView?src:''}></img>
         </div>

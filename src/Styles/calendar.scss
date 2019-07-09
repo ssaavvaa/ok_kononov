@@ -22,7 +22,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-
+      grid-gap: .1rem;
     grid-template-columns: repeat(auto-fill, 306px);
     grid-template-rows: repeat(auto-fill, 1fr);
     justify-items: center;
@@ -32,12 +32,12 @@
 }
 
 .calendarItem__wrapper{
-    background:#eeeeee;
+    background:$background_light;
     align-items: center;
     border: 1px solid black;
      padding: 30px 50px;
     @include phone{
-        margin-bottom: 2rem;
+
         flex-direction: column;
         align-items: center;
     }

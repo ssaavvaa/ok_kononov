@@ -3,6 +3,18 @@ import SEO from "../../components/seo"
 import Layout from "../../components/layout";
 import trainingCard from '../../templates-info/training_program';
 import { Link , navigate } from "gatsby";
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+
+const scroll_button = {
+    width:'55px',
+    height:'55px',
+    padding:"4px",
+    focus:'none',
+    outline:'none',
+    border:'0px',
+    boxShadow:'0px 0px 2px 2px black',
+    zIndex:100
+  }
 
 
 
@@ -74,6 +86,7 @@ return (
     return (
         <Layout>
         <SEO title="training_program" />
+        <ScrollUpButton style={scroll_button} />
         <div className = 'container container_landing_training'>
         {single_page &&
         <Fragment>

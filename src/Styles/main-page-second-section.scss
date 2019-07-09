@@ -5,8 +5,16 @@
     background: linear-gradient(to bottom, $background_light, white, white);
     border-top:2px solid black;
     display: grid;
+    width:100%;
     grid-template-columns: 2fr 3fr;
     padding-top:2rem;
+    @include phone {
+      grid-template-columns: repeat(auto-fill, 100%);
+      background: white;
+    
+      padding-top: 0px;
+    
+    }
 }
 
 .secondSection__block{
@@ -31,6 +39,7 @@
      button{
          @include button-primary;
     }
+
 }
 
 

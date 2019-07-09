@@ -5,6 +5,7 @@ export default [
         img_src:require('../images/Blog/blog_photo-1.png'),
         date:'THURSDAY, JUNE 27',
         heading:'5 правил Спортсмена',
+        link:'five_rules/',
         description:'Хочешь крутых результатов как у профессиональных спортсменов? Мысли как они.'
     },
     {
@@ -13,6 +14,7 @@ export default [
         img_src:require('../images/Blog/blog_photo-2.png'),
         date:'SUNDAY, JUNE 23',
         heading:'7 навыков Успешного тренера ',
+        link:'success-coach-skills/',
         description:'Мысли Стивена Кови подойдут для любого кто хочет жить на полную.'
     },
     {
@@ -20,6 +22,7 @@ export default [
         alt:'fitness-industry',
         img_src:require('../images/Blog/blog_photo-3.png'),
         date:'SATURDAY, JUNE 22',
+        link:'fitness-history',
         heading:'История зарождения Фитнес индустрии ',
         description:'или Страх лучший двигатель прогресса '
     },
@@ -36,6 +39,7 @@ export default [
         alt:'team-work',
         img_src:require('../images/Blog/blog_photo-5.png'),
         date:'FRIDAY, JUNE 21',
+        link:'team-work',
         heading:'5 правил работы в команде',
         description:'по стандартам Cirque Du Soleil.'
     },

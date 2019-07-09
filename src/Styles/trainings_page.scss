@@ -3,16 +3,35 @@
 .trainings_page{
     min-height: 100vh;
     h1{
-        margin:.65rem 0rem 2rem 0rem;
+        margin:0rem 0rem 1rem 0rem;
         background: black;
         color:white;
         background:black;
-        padding:0rem 2rem;
+        padding:.6rem 2rem;
+        @include tablet{
+            text-align: center;
+        }
+
         span{
             background:$background_red;
             border-bottom-right-radius: 60px 1px;
             padding:0rem .5rem;
             font-size: 2rem;
+            @include tablet{
+               
+                font-size: 1.2rem;
+                display: block;
+                max-width: max-content;
+                padding:.3rem .6rem;
+                margin: 0 auto;
+                margin-top: .5rem;
+              }
+        }
+        @include phone{
+            margin:0rem;
+            margin-bottom: 1rem;
+            text-align: center;
+          font-size: 1.5rem;
         }
     }
    ul{
@@ -38,6 +57,9 @@
               display: flex;
               justify-content: center;
               align-items: center;
+              @include tablet{
+                  opacity:0;
+              }
           }
           .view_training{
             transition: all .3s ease-in-out;
@@ -85,10 +107,17 @@
 }
 
 .nothing_found_in_trainings{
-    width: 600px;
+   max-width: 600px;
     text-align: center;
     font-size: 1.8rem;
     margin:0 auto;
+    @include phone{
+        margin:0rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      font-size: 1.5rem;
+      font-size: 1.1rem;
+    }
 }
 
 

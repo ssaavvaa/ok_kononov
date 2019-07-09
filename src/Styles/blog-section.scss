@@ -1,13 +1,27 @@
 @import './variables.scss';
 
+
+
+
 .blog-wrapper{
     text-align: center;
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
     background: linear-gradient(to top , $background_light ,$background_light, white);
     h2{
         background: linear-gradient(to right, #ffffff,$background_light);
         color:#000000dc;
         text-align: right;
         padding-right: 10rem;
+        @include phone {
+       text-align: center;
+       font-size: 1.3rem;
+        }
+    }
+    @include phone {
+        padding-bottom: 2rem!important;
     }
 
     background-size: cover;
@@ -19,9 +33,12 @@
         grid-gap: 30px;
         grid-template-columns: 1fr 1fr ;
         padding:1rem;
+        &:hover{
+            cursor: pointer;
+        }
         @include phone {
-            grid-template-columns: repeat(auto-fill, 380px);
-            margin: 0 auto;
+      display: flex;
+       flex-direction: column;
         }
     }
     img{

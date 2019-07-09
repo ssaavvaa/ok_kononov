@@ -1,11 +1,26 @@
 
 
+@import '../Styles/variables.scss';
+
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/Helvetica.ttf") format("opentype");
+}
+
+
+
+
+
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-
+  overflow-x:hidden;
+  overflow-y: hidden;
   letter-spacing: .4px;
+  font-family:Helvetica;
+  font-weight: 300;
+
 }
 
 *{
@@ -205,7 +220,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Roboto', Arial,sans-serif;
+  
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -370,7 +385,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  font-family: 'Roboto', Arial,sans-serif;
+
   
 }
 figure {
@@ -411,9 +426,7 @@ table {
   width: 100%;
 }
 
-span{
-  font-family: 'Roboto', Arial,sans-serif;
-}
+
 fieldset {
   margin-left: 0;
   margin-right: 0;
@@ -620,12 +633,24 @@ li{
   list-style: none;
 }
 
+
+@import '../Styles//variables.scss';
+
+
+
 main {
-  width:calc(100vw - 165px);
+  width:calc(100vw - 165px - 1rem);
   position: absolute;
+  overflow-x:hidden;
+  overflow-y: hidden;
   right:0;
+  left:auto;
   top:0;
   z-index: 3;
+  @include phone {
+    width:100%;
+ 
+  }
 }
 
 button{
@@ -646,12 +671,22 @@ button{
 .container{
  max-width:1200px;
  margin:0 auto;
- min-width: 400px;
- padding:1.5rem 1.5rem 1.5rem 2.5rem;
+ min-width: 320px;
+ padding:1.5rem;
+ @include phone {
+  padding:1.5rem;
+}
+ 
 }
 
 .section{
-  padding:1.5rem 1.5rem 1.5rem 2.5rem;
+  padding:1.5rem;
+  min-width: 320px;
+  position:relative;
+  @include phone {
+    padding:1.5rem;
+  }
+
 }
 
 .ScrollUpButton{
@@ -663,6 +698,63 @@ button{
   margin:5px;
   &:hover{
       cursor:pointer;
+  }
+}
+.navToggler{
+  position:fixed;
+  transition: all .3s ease-in-out;
+  top:1rem;
+  right:0rem;
+  display: none;
+ padding:15px 10px;
+ z-index:7;
+  cursor:pointer;
+  @include phone {
+    display: initial;
+  }
+}
+
+
+.navToggler{
+  font-size: 40px;
+  height:80px;
+  width:50px;
+  background: rgba(255, 255, 255, 0.726);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.486);
+  border-bottom-left-radius: 10px 50px;
+}
+
+#blur_main{
+  display:none;
+
+position:relative;
+ width:100vw;
+ min-height:content;
+ background:transparent;
+}
+
+#blur_main::after{
+  content:'';
+  position:fixed;
+  top:0;
+  right:0;
+  width:100%;
+  z-index: 4;
+  height:100%;
+  background: rgba(0, 0, 0, 0.514);
+ 
+}
+
+input {
+transition: all .3s ease-in-out;
+border:0px;
+border-radius: 5px;
+    &:focus{
+
+      background: rgb(250, 248, 248);
+    outline:none;
+    border:1px solid rgba(0, 0, 0, 0.514);
+    border-radius: 5px;
   }
 }
 

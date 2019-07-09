@@ -1,13 +1,13 @@
 
-import React from "react"
+import React, { useEffect }  from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 import NavBar from './NavBar';
 import Header from "./header";
 import Footer from './Footer';
+import $ from "jquery";
 import "./layout.scss";
 import '../Styles/media_rules-font-size.scss';
-
 import "../Styles/header.scss";
 import "../Styles/main-page-second-section.scss";
 import '../Styles/nav-bar.scss';
@@ -26,8 +26,57 @@ import '../Styles/Footer.scss';
 import '../Styles/training_landing.scss';
 import '../Styles/instructor_page.scss';
 import '../Styles/feedbacks_page.scss';
+import '../Styles/blogs.scss';
+
+
+
 
 const Layout = ({ children }) => {
+
+  useEffect(() => {
+    if($( document ).width() < 1024){
+    window.addEventListener('scroll', function(){
+      $("#blur_main").hide()
+          $('.navbar').css({right:-195})
+          $(".navToggler").css({right:"0px"})
+          $(".aside_ul").hide()
+    });
+  }
+
+    return () => {
+      window.removeEventListener('scroll', function(){
+      $("#blur_main").hide()
+          $('.navbar').css({right:-195})
+          $(".navToggler").css({right:"0px"})
+    });
+  };
+
+
+  },[])
+
+const slideNavBar = () => {
+    const position = $('.navbar').css('right');
+
+    $("body").click(function(e) {
+        if(e.target.closest(".navbar") === null){
+          $("#blur_main").hide()
+          $('.navbar').css({right:-195})
+          $(".navToggler").css({right:"0px"})
+          $(".aside_ul").hide()
+         }
+      });
+   if(position === "-195px"){
+      $("#blur_main").show()
+      $('.navbar').css({right:0})
+      $(".navToggler").css({right:"196px"})
+    }
+    if(position === 0){
+      
+      $("#blur_main").hide()
+      $('.navbar').css({right:-195})
+}}
+
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -42,11 +91,12 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <NavBar />
-        <main>
+      <div id="blur_main"> </div>
+      <button className ="navToggler" id="show_nav" onClick={slideNavBar} ><i className="fas fa-bars"></i></button>
+        <main >
         {children}
         <Footer />
         </main>
-       
     </>
   )
 }

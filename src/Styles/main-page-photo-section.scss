@@ -4,8 +4,8 @@
 
 
 .insta_photos_section{
-    padding:0rem 0rem 0rem 1rem;
     position:relative;
+
 }
 
 .images-section{
@@ -13,14 +13,17 @@
     background: url('../images/white-pro-fitness-background.jpg');
     background-size: cover;
     display: grid;
-grid-gap: 10px;
+    grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
      grid-template-rows: repeat(2, 1fr);
      justify-items: center;
     grid-template-areas: 
     "hero hero med1 med1"
     "hero hero med2 med3";
- 
+    @include phone {
+       display: flex;
+       flex-direction: column;
+      }
 
 
 }
@@ -33,7 +36,14 @@ grid-gap: 10px;
     z-index: 10;
     background:rgb(255, 255, 255);
     max-width: 700px;
+  
     padding-left: 11rem;
+    @include phone {
+      text-align: center;
+      padding: 1rem 0rem;
+      padding:10px 20px;
+      margin:0px;
+       }
 
 }
 
@@ -46,6 +56,9 @@ grid-gap: 10px;
     position: relative;
     &:hover > .image_links{
         opacity:1;
+        @include tablet{
+            opacity:0;
+        }
     }
     img{
         width:100%;

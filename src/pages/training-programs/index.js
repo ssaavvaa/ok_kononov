@@ -1,10 +1,23 @@
 import React , { Fragment, useState, useEffect } from "react";
 import SEO from "../../components/seo";
-import Fade from 'react-reveal/Fade';
 import Layout from "../../components/layout";
 import trainingCard from '../../templates-info/training_program';
 import { navigate } from '@reach/router';
 import {prefix} from '../../components/helpers';
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+
+
+const scroll_button = {
+  width:'55px',
+  height:'55px',
+  padding:"4px",
+  focus:'none',
+  outline:'none',
+  border:'0px',
+  boxShadow:'0px 0px 2px 2px black',
+  zIndex:100
+}
+
 
 
 
@@ -23,15 +36,15 @@ const TrainingPrograms = (props) => {
           break;
       case 'middle':
           const middle = trainingCard.filter(x => x.category === 'middle');
-          setState({trainings:middle,category:'middle'})
+          setState({trainings:middle,category:'level middle'})
           break;
       case 'advance':
            const advance = trainingCard.filter(x => x.category === 'advance');
-           setState({trainings:advance,category:'advance'})
+           setState({trainings:advance,category:'level advance'})
            break;
       case 'basic':
             const basic = trainingCard.filter(x => x.category === 'basic');
-            setState({trainings:basic,category:'basic'})
+            setState({trainings:basic,category:'level basic'})
             break;
     default:
         setState({trainings:trainingCard,category:'all'});
@@ -111,8 +124,9 @@ const {trainings} = state;
 return(
   <Layout>
     <SEO title="training_program" />
+    <ScrollUpButton style={scroll_button} />
     <div className="container trainings_page">
-    <h1>TRAINING PROGRAMS - "<span >{state.category}</span>" </h1>
+    <h1>TRAINING PROGRAMS - <span >"{state.category}"</span> </h1>
     <div className="search__trainings_block">
     <div>
       <p>Filter by:</p>
@@ -141,7 +155,6 @@ return(
     </div>
 
     <ul>
-    <Fade>
     {trainings.length > 0 &&
      trainings.map(training => (
       <li onClick={() => navigateTo(training._id)} key={training._id}>
@@ -158,10 +171,9 @@ return(
       </li>
     ))
   }
-    </Fade>
     </ul>
-    {!trainings.length  && 
-  <p className="nothing_found_in_trainings">Ничего не найдено по вашему запросу</p>
+    {!trainings.length  &&
+    <p className="nothing_found_in_trainings">Ничего не найдено по вашему запросу</p>
   }
     </div>
   </Layout>

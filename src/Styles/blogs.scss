@@ -1,0 +1,158 @@
+@import './variables.scss';
+
+.blogs-container{
+    min-height: 100vh;
+    h1{
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: $box-shadow-bottom;
+    }
+}
+
+.blogs_ul_container{
+    display: grid;
+ margin:0 auto;
+ grid-gap: 10px;
+justify-content: center;
+
+justify-items: center;
+
+    grid-template-columns: repeat(auto-fill, 306px);
+}
+
+
+.blog_wrapper{
+   border-radius: 5px;
+   padding-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    background: white;
+    border:1px solid black;
+    width:100%;
+    background: linear-gradient( to bottom , rgba(219, 209, 209, 0.158) , white);
+
+    h3{
+        background: $background_red;
+        background:white;
+        padding:10px;
+        border:0px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        box-shadow: $box-shadow-bottom;
+    }
+
+    h3 , p{
+        margin-bottom: .5rem;
+    }
+
+    a{
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 1.1rem;
+         color:white;
+         color:black;
+        padding:5px 0px;
+        &:hover{
+            background:white;
+            border:.3px solid rgba(0, 0, 0, 0.123);
+          
+        }
+    }
+
+}
+
+.blog-post-container{
+    max-width: 1000px;
+    margin:0 auto;
+    padding:1.5rem 1.5rem 1.5rem 2.5rem;
+    @include phone {
+        padding:1.5rem;
+      }
+*{
+    line-height: 1.2;
+}
+
+ h1,h2,h3,h5,h6{
+        text-align: center;
+        margin:.5rem 0rem;
+        padding:.5rem 0rem;
+        max-width: 800px;
+        margin:0 auto;
+    }
+    h4{
+        text-align: center;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1.6rem;
+
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem
+    }
+    p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding:.5rem
+    }
+    img{
+    display: block;
+    margin: 0 auto;
+        margin: 0 auto;
+        max-width: 100%;
+    
+
+    }
+}
+
+
+.blog-content{
+   *{
+       display: none;
+   }
+
+
+}
+
+
+.kononov_bottom_blog{
+    border:1px solid rgba(0, 0, 0, 0.178);
+
+    grid-template-columns: repeat(auto-fill, 350px);
+    display: grid;
+    grid-gap: 10px;
+    padding:1rem;
+    padding-top: 1rem;
+    img{
+        box-shadow: none;
+
+    }
+    margin:0 auto;
+   justify-content: center;
+   h3 , p{
+       margin:0px;
+       padding:7px 20px;
+
+   }
+
+   @include phone{
+       display: flex;
+       flex-direction: column;
+    img{
+ 
+        box-shadow: none;
+     
+    }
+    grid-template-columns: repeat(auto-fill, auto);
+   }
+
+}
+

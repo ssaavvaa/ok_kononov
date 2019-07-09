@@ -10,7 +10,6 @@ import InstructorsSection from '../components/main-page-sections/instructors_sec
 import Contacts from '../components/main-page-sections/contacts';
 import Layout from "../components/layout";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
-
 import SEO from "../components/seo";
 
 

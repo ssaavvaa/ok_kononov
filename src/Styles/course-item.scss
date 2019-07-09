@@ -5,16 +5,53 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+
+    @include phone {
+     
+       display: flex;
+       flex-direction:column;
+       width:100%;
+       margin:0px;
+       padding:0px;
+       }
+
     img{
         width:250px;
         height:250px;
+        @include phone {
+        margin-bottom: 1rem;
+          }
     }
     p{
         margin-bottom: .5rem;
+        @include phone {
+           line-height: 1.1;
+              }
     }
     div{
         margin-bottom:.5rem;
     }
+    button{
+        @include button-secondary
+        @include phone {
+           
+            padding:3px 8px;
+          }
+    }
+
+    figcaption{
+        @include phone {
+            max-width: 80%;
+          
+          }
+    }
+    @include phone {
+        width:320px;
+        margin: 0 auto;
+  
+        grid-template-columns: repeat(auto-fill, 306px);
+        background: white;
+      }
 }
 
 
@@ -26,7 +63,11 @@
    display: inline-block;
    padding:.5rem;
     top:calc(50% - 3rem);
-    right:-6rem;
+    right:-5rem;
+    @include phone {
+        font-size: 2rem;
+        right:-1rem;
+      }
 }
 
 .arrow-left{
@@ -36,7 +77,11 @@
    display: inline-block;
    padding:.5rem;
     top:calc(50% - 3rem);
-    left:-6rem;
+    left:-5rem;
+    @include phone {
+        font-size: 2rem;
+        left:-1rem;
+      }
 }
 
 .arrow-right, .arrow-left{
